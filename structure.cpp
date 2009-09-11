@@ -61,13 +61,14 @@ void structure::cal_squares(){
 
 				std::cout<<" " << wsk  <<std::endl;
 				std::cout<<"  "<<std::endl;
-	*/
+	
 	        temp->write_square();
-            grid_in.push_back(temp);
+			*/
+            grid_in.push_back(*temp);
             wsk++;
 		}
 	}
-/*
+
 	wsk=1;
 	int a,b,c,d;
 	for(int i=1;i<grid_in.size();i++){
@@ -76,14 +77,24 @@ void structure::cal_squares(){
 		else
 			a=i-count;
 
+		if(i%count==0)
+			b=0;
+		else
+			b=i+1;
 
 		if(i>grid_in.size()-count)
+			c=0;
+		else
+			c=i+count;
+
+		if(i%(count+1)==0 || i==1)
 			d=0;
 		else
-			d=i+count;
+			d=i-1;
 
+        grid_in.at(i).set_neiberhood(a,b,c,d);
 	}
-*/
+    delete temp;
 }
 //--------------------------------------------------------------------------------------------  write_points
 void structure::write_points(){
@@ -97,6 +108,6 @@ void structure::write_points(){
 void structure::write_squares(){
 
 	for(int x=1;x<grid_in.size();x++){
-      grid_in.at(x)->write_square();
+      grid_in.at(x).write_square();
 	}
 }
