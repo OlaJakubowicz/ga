@@ -36,6 +36,7 @@ bool Init (const char *header);
 Uint32 getpixel(SDL_Surface *surface, int x, int y);
 void putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
 structure* Loop (void);
+
 //void redraw(structure*);
 
 
