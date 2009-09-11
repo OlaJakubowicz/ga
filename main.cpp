@@ -24,7 +24,9 @@ int main(int argc, char *args[]){
 	ekr->cal_points();
 //	ekr->write_points();
 	ekr->cal_squares();
-	ekr->write_squares();
+//	ekr->write_squares();
+	ekr->write_neiberhood();
+	
 	
     img = display_bmp(BMP2);
     ekr=Loop();

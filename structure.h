@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 
 #include "square.h"
 
@@ -17,5 +18,6 @@ class structure{
         void cal_squares(void);
         void write_points(void);
         void write_squares(void);
+        void write_neiberhood(void);
 
 	};

@@ -1,12 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <algorithm>
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-
 #include "structure.h"
-
 
 //--------------------------------------------------------------------------------------------  konstruktor
 structure::structure(){
@@ -26,8 +18,8 @@ void structure::cal_scale(int size, int pro_size){
 	}
 	
 	
-	cout <<"scale "<< scale << endl ;
-	cout <<"temp "<< count << endl ;
+//	cout <<"scale "<< scale << endl ;
+//	cout <<"temp "<< count << endl ;
 }
 //--------------------------------------------------------------------------------------------  cal_points
 void structure::cal_points(){
@@ -47,11 +39,12 @@ void structure::cal_points(){
 }
 //--------------------------------------------------------------------------------------------  cal_square
 void structure::cal_squares(){
-    square *temp =new square();
+    square *temp;
     
     int wsk=1;
     for(int x=0;x<count;x++){
         for(int y=0;y<count;y++){
+            temp =new square();
             temp->set_square(point_in.at(wsk),point_in.at(wsk+1),point_in.at(wsk+count),point_in.at(wsk+count+1));
 /*
              	point_in.at(wsk).write();
@@ -66,6 +59,7 @@ void structure::cal_squares(){
 			*/
             grid_in.push_back(*temp);
             wsk++;
+            delete temp;
 		}
 	}
 
@@ -95,6 +89,7 @@ void structure::cal_squares(){
         grid_in.at(i).set_neiberhood(a,b,c,d);
 	}
     delete temp;
+
 }
 //--------------------------------------------------------------------------------------------  write_points
 void structure::write_points(){
@@ -109,5 +104,13 @@ void structure::write_squares(){
 
 	for(int x=1;x<grid_in.size();x++){
       grid_in.at(x).write_square();
+	}
+}
+//--------------------------------------------------------------------------------------------  write_neiberhood
+void structure::write_neiberhood(){
+
+	for(int x=1;x<grid_in.size();x++){
+	  std::cout<<x;
+      grid_in.at(x).write_neiberhood();
 	}
 }

@@ -32,6 +32,6 @@ void square::write_square(){
 //--------------------------------------------------------------------------------------------  write_neiberhood
 void square::write_neiberhood(){
 
-    std::cout<<"1: " << neiberhood[0] <<" 2: " << neiberhood[1] << " 3: "<< neiberhood[2] << " 4: "<< neiberhood[3] << std::endl;
+    std::cout<<" 1: " << neiberhood[0] <<" 2: " << neiberhood[1] << " 3: "<< neiberhood[2] << " 4: "<< neiberhood[3] << std::endl;
 	std::cout<<"  "<<std::endl;
 }
