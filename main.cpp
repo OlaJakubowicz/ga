@@ -17,7 +17,6 @@ int main(int argc, char *args[]){
 	if (!Init ("mesh")){
        	exit (EXIT_FAILURE);
 	   	}
-
 	structure *ekr=new structure();
 		
 	ekr->cal_scale(XSIZE,50);
@@ -25,12 +24,14 @@ int main(int argc, char *args[]){
 //	ekr->write_points();
 	ekr->cal_squares();
 //	ekr->write_squares();
-	ekr->write_neiberhood();
-	
-	
-    img = display_bmp(BMP2);
-    ekr=Loop();
+//	ekr->write_neiberhood();
+	ekr->get_square(20);
 
+    img = display_bmp(BMP2);
+	paint_rectangle(screen,ekr);
+
+ 	SDL_UpdateRect(screen, 0, 0, 0, 0);
+	SDL_Delay(2000);
  	SDL_Quit ();
 
 	cout << "Tekst  ";

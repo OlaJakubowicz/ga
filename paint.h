@@ -3,13 +3,14 @@
 #include <string.h>
 #include <unistd.h>
 #include <math.h>
+#include <vector>
 
 #include <SDL/SDL.h>
 #include <GL/gl.h>
 #include <GL/glu.h>
 
-
 #include "structure.h"
+#include "SDL_gfx.h"
 
 using namespace std;
 #define XSIZE 540
@@ -37,6 +38,7 @@ Uint32 getpixel(SDL_Surface *surface, int x, int y);
 void putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
 structure* Loop (void);
 
+void paint_rectangle(SDL_Surface *,structure *);
 //void redraw(structure*);
 
 

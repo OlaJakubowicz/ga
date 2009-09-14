@@ -213,3 +213,44 @@ void redraw(structure* ekr){
 //gfxTriangle(SDL_Surface * screen,  Sint32 x1, Sint32 x2,Sint32 x3,Sint32  y1,Sint32 y2,Sint32 y3, Uint32 color){
 
 }*/
+
+//--------------------------------------------------------------------------------------------  paint_rectangle
+void paint_rectangle(SDL_Surface *screen,structure *data){
+ 
+	int size = data->get_square_size();
+	cout << size << "  ";
+
+	
+	vector <int> tab_point ;
+	tab_point.reserve (100);
+	//tab_point.clear();
+	data->get_square(20);
+
+//		cout << points.size() << "  ";
+
+/*
+		for(int j=0;j<points.size();j++){
+			cout << points.at(j) << "  ";
+		}
+			cout << endl;
+*/
+
+/*
+
+	for(int i=0;i<size;i++){
+       points=temp->get_square(i);
+ //       cout << points.at(0)<< "  " << points.at(1)<< "  " <<points.at(2)<< "  " << points.at(3) << "  " << endl;
+//        gfxLine(screen, points.at(0), points.at(1),points.at(2), points.at(3), 0xffffff);
+
+/*      gfxRectangle(screen, points.at(0), points.at(1),points.at(2), points.at(3),points.at(4),
+					points.at(5), points.at(6), points.at(7), 0xffffff);
+
+		for(int j=0;j<points.size();j++){
+			cout << points.at(j) << "  ";
+		}
+			cout << endl;
+
+	}
+*/
+//gfxPlot(screen);
+}

@@ -3,6 +3,8 @@
 
 #include "point.h"
 
+using namespace std;
+
 class square{
     private:
     	point *points;              // UP,LEFT,DOWN,RIGHT
@@ -15,5 +17,7 @@ class square{
 	    void write_square(void);
 	    void write_neiberhood(void);
 
+		vector <int> get_points(void);
+	    
 
 };

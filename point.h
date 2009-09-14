@@ -11,8 +11,9 @@ class point{
 			  void set_state(int);
 			  void set(int,int,int);
 			  void mod_xy();
-			  int ret_x();
-			  int ret_y();
+			  
+			  int get_x();
+			  int get_y();
 			  int ret_state();
 			  void write();
 	  };

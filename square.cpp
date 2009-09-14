@@ -35,3 +35,14 @@ void square::write_neiberhood(){
     std::cout<<" 1: " << neiberhood[0] <<" 2: " << neiberhood[1] << " 3: "<< neiberhood[2] << " 4: "<< neiberhood[3] << std::endl;
 	std::cout<<"  "<<std::endl;
 }
+//--------------------------------------------------------------------------------------------  get_points
+vector <int> square::get_points(void){
+
+    vector <int> temp;
+    for(int i=0;i<4;i++){
+    	temp.push_back(points[i].get_x());
+    	temp.push_back(points[i].get_y());
+	}
+	return temp;
+}
+

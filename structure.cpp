@@ -65,7 +65,7 @@ void structure::cal_squares(){
 
 	wsk=1;
 	int a,b,c,d;
-	for(int i=1;i<grid_in.size();i++){
+	for(int i=0;i<grid_in.size();i++){
 		if(i<count)
 			a=0;
 		else
@@ -94,7 +94,7 @@ void structure::cal_squares(){
 //--------------------------------------------------------------------------------------------  write_points
 void structure::write_points(){
 
-	for(int x=1;x<point_in.size();x++){
+	for(int x=0;x<point_in.size();x++){
       point_in.at(x).write();
 	}
 }
@@ -102,15 +102,32 @@ void structure::write_points(){
 //--------------------------------------------------------------------------------------------  write_squares
 void structure::write_squares(){
 
-	for(int x=1;x<grid_in.size();x++){
+	for(int x=0;x<grid_in.size();x++){
       grid_in.at(x).write_square();
 	}
 }
 //--------------------------------------------------------------------------------------------  write_neiberhood
 void structure::write_neiberhood(){
 
-	for(int x=1;x<grid_in.size();x++){
+	for(int x=0;x<grid_in.size();x++){
 	  std::cout<<x;
       grid_in.at(x).write_neiberhood();
 	}
+}
+//--------------------------------------------------------------------------------------------  get_square
+vector <int> structure::get_square(int x){
+    vector <int> tab(grid_in.at(x).get_points());
+  	
+
+		for(int j=0;j<tab.size();j++){
+			cout << tab.at(j) << "  ";
+		}
+		cout << endl;
+
+			
+	return tab;
+}
+//--------------------------------------------------------------------------------------------  get_square_size
+int structure::get_square_size(){
+	return grid_in.size();
 }

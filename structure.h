@@ -20,4 +20,7 @@ class structure{
         void write_squares(void);
         void write_neiberhood(void);
 
+        vector <int> get_square(int);
+        int get_square_size();
+
 	};
