@@ -34,8 +34,6 @@ extern SDL_Surface *img;		// aktualnie widoczny obrazek
 void Wyswietl(const int filtr_w, const int filtr_h, const int filtr[],char *napis);
 SDL_Surface *display_bmp(char *file_name);
 bool Init (const char *header);
-Uint32 getpixel(SDL_Surface *surface, int x, int y);
-void putpixel(SDL_Surface *surface, int x, int y, Uint32 pixel);
 structure* Loop (void);
 
 void paint_rectangle(SDL_Surface *,structure *);

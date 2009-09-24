@@ -30,3 +30,4 @@ int point::get_x(){
 int point::get_y(){
 	  return y;
 	  };
+

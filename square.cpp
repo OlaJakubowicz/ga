@@ -5,6 +5,7 @@
 square::square(){
     points = new point[4];
     neiberhood = new int[4];
+    depth=0;
 }
 //--------------------------------------------------------------------------------------------  set_square
 void square::set_square(point up,point lp,point dp,point rp){
@@ -37,12 +38,40 @@ void square::write_neiberhood(){
 }
 //--------------------------------------------------------------------------------------------  get_points
 vector <int> square::get_points(void){
-
     vector <int> temp;
+    temp.reserve(8);
+    
     for(int i=0;i<4;i++){
     	temp.push_back(points[i].get_x());
     	temp.push_back(points[i].get_y());
 	}
 	return temp;
 }
+//--------------------------------------------------------------------------------------------  get_neiberhood
+vector <int> square::get_neiberhood(void){
+ 	vector <int> temp;
+    temp.reserve(4);
 
+    for(int i=0;i<4;i++){
+    	temp.push_back(neiberhood[i]);
+	}
+	return temp;
+}
+//--------------------------------------------------------------------------------------------  get_depth
+int square::get_depth(){
+	return depth;
+}
+//--------------------------------------------------------------------------------------------  set_depth
+void square::set_depth(int a){
+    depth=depth+a;
+}
+//--------------------------------------------------------------------------------------------  get_point
+vector <point > square::get_point(void){
+    vector <point > temp;
+    temp.reserve(4);
+
+    for(int i=0;i<4;i++){
+    	temp.push_back(points[i]);
+	}
+	return temp;
+}

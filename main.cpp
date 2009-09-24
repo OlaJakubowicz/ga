@@ -25,17 +25,17 @@ int main(int argc, char *args[]){
 	ekr->cal_squares();
 //	ekr->write_squares();
 //	ekr->write_neiberhood();
-	ekr->get_square(20);
-
     img = display_bmp(BMP2);
+	ekr->crumble_squares(img);
+
 	paint_rectangle(screen,ekr);
 
  	SDL_UpdateRect(screen, 0, 0, 0, 0);
-	SDL_Delay(2000);
+	SDL_Delay(10000);
  	SDL_Quit ();
 
 	cout << "Tekst  ";
-	system("pause");
+//	system("pause");
 	
 //	delete ekr;
   	return 0;
