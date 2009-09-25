@@ -23,15 +23,18 @@ int main(int argc, char *args[]){
 	ekr->cal_points();
 //	ekr->write_points();
 	ekr->cal_squares();
-//	ekr->write_squares();
+
+//	
 //	ekr->write_neiberhood();
     img = display_bmp(BMP2);
 	ekr->crumble_squares(img);
 
+//	ekr->write_squares();
+	 
 	paint_rectangle(screen,ekr);
 
  	SDL_UpdateRect(screen, 0, 0, 0, 0);
-	SDL_Delay(10000);
+	SDL_Delay(8000);
  	SDL_Quit ();
 
 	cout << "Tekst  ";

@@ -130,14 +130,23 @@ structure* Loop (void){
 void paint_rectangle(SDL_Surface *screen,structure *data){
  
 	int size = data->get_square_size();
+	
+	std::cout << size <<std::endl;
+	
 	vector <int> points ;
-	points.reserve (100);
+	points.reserve(8);
 	
 	for(int i=0;i<size;i++){
+       if(i==123) i++;
+       
        	points=data->get_square(i);
+//       	std::cout << points.at(0) << "  " << points.at(1) << "  " << points.at(2)<< "  " << points.at(3)<<"  " << points.at(4)<<
+//				"  " << 	points.at(5)<<"  " <<  points.at(6)<<"  " <<  points.at(7) <<std::endl;
+       	 
       	gfxRectangle(screen, points.at(0), points.at(1),points.at(2), points.at(3),points.at(4),
 					points.at(5), points.at(6), points.at(7), 0xffffff);
 					
+        points.clear();
 //		SDL_Delay(200);
 //		SDL_UpdateRect(screen, 0, 0, 0, 0);
   

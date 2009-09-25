@@ -28,5 +28,6 @@ class structure{
 
         vector <int> get_square(int);
         int get_square_size();
+        int get_point_size();
 
 	};
