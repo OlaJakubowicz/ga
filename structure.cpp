@@ -110,6 +110,11 @@ vector <int> structure::get_square(int x){
     vector <int> tab(grid_in.at(x).get_points());
 	return tab;
 }
+//--------------------------------------------------------------------------------------------  get_triangle
+vector <int> structure::get_triangle(int x){
+    vector <int> tab(triangle_in.at(x).get_points());
+	return tab;
+}
 //--------------------------------------------------------------------------------------------  get_square_size
 int structure::get_square_size(){
 	return grid_in.size();
@@ -227,4 +232,35 @@ void structure::crumble_squares(SDL_Surface *s){
 //--------------------------------------------------------------------------------------------  get_square_size
 int structure::get_point_size(){
 	return point_in.size();
+}
+
+//--------------------------------------------------------------------------------------------  cal_triangle
+void structure::cal_triangle(void){
+	triangle *temp;
+	
+	for(int i=0;i<grid_in.size();i++){
+        if(i==123) i++;
+        
+        vector <point> old_point=grid_in.at(i).get_point();
+		vector <int> old_neiberhood=grid_in.at(i).get_neiberhood();
+		            
+        temp =new triangle();
+        temp->set_triangle(old_point.at(0),old_point.at(1),old_point.at(2));
+        temp->set_neiberhood(old_neiberhood);
+        temp->set_depth(grid_in.at(i).get_depth());
+        triangle_in.push_back(*temp);
+        delete temp;
+        
+        temp =new triangle();
+        temp->set_triangle(old_point.at(0),old_point.at(2),old_point.at(3));
+        temp->set_neiberhood(old_neiberhood);
+        temp->set_depth(grid_in.at(i).get_depth());
+        triangle_in.push_back(*temp);
+        delete temp;
+	}
+
+}
+//--------------------------------------------------------------------------------------------  get_triangle_size
+int structure::get_triangle_size(){
+	return triangle_in.size();
 }

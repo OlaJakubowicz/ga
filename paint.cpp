@@ -152,3 +152,22 @@ void paint_rectangle(SDL_Surface *screen,structure *data){
   
 	}
 }
+
+//--------------------------------------------------------------------------------------------  paint_triangle
+void paint_triangle(SDL_Surface *screen,structure *data){
+	int size = data->get_triangle_size();
+
+	vector <int> points ;
+	points.reserve(6);
+
+	for(int i=0;i<size;i++){
+       	points=data->get_triangle(i);
+      	gfxTriangle(screen, points.at(0), points.at(1),points.at(2), points.at(3),
+		  	points.at(4),points.at(5), 0xffffff);
+
+        points.clear();
+//		SDL_Delay(200);
+//		SDL_UpdateRect(screen, 0, 0, 0, 0);
+
+	}
+}

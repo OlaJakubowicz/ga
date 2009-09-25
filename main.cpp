@@ -31,7 +31,9 @@ int main(int argc, char *args[]){
 
 //	ekr->write_squares();
 	 
-	paint_rectangle(screen,ekr);
+//	paint_rectangle(screen,ekr);
+	ekr->cal_triangle();
+	paint_triangle(screen,ekr);
 
  	SDL_UpdateRect(screen, 0, 0, 0, 0);
 	SDL_Delay(8000);

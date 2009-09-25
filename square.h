@@ -1,7 +1,8 @@
 #include <vector>
 #include <iostream>
 
-#include "point.h"
+//#include "point.h"
+#include "triangle.h"
 
 using namespace std;
 

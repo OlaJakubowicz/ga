@@ -37,6 +37,7 @@ bool Init (const char *header);
 structure* Loop (void);
 
 void paint_rectangle(SDL_Surface *,structure *);
-//void redraw(structure*);
+void paint_triangle(SDL_Surface *,structure *);
+
 
 
